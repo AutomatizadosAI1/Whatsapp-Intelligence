@@ -1,0 +1,8 @@
+node_modules/
+test-results/
+playwright-report/
+*.log
+.DS_Store
+# dist se versiona a propósito: es la carpeta que se carga en chrome://extensions
+
+entrega/

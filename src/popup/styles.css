@@ -1,0 +1,59 @@
+@import '@fontsource-variable/inter';
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --color-brand-300: #7ee8ae;
+  --color-brand-400: #3ddc84;
+  --color-brand-500: #1fbf63;
+  --color-brand-600: #17a554;
+  --color-brand-700: #128a46;
+  --color-brand-800: #0e6b37;
+}
+
+html,
+body {
+  margin: 0;
+  width: 380px;
+  min-height: 200px;
+}
+
+body {
+  @apply bg-zinc-50 text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100;
+  font-feature-settings: 'cv11', 'ss01';
+}
+
+@keyframes wai-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wai-indeterminate {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(250%);
+  }
+}
+
+.wai-fade-in {
+  animation: wai-fade-in 180ms ease-out both;
+}
+
+.wai-indeterminate {
+  animation: wai-indeterminate 1.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wai-fade-in,
+  .wai-indeterminate {
+    animation: none;
+  }
+}
